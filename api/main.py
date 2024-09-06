@@ -7,10 +7,10 @@ import numpy as np
 app = FastAPI()
 
 # Load the trained model and encoders
-model = joblib.load("model\churn_model.pkl")
-one_hot_columns = joblib.load('encoder\one_hot_columns.pkl')  # Columns from one-hot encoding
-tenure_encoder = joblib.load('encoder\tenure_encoder.pkl')  # Encoder for scaling tenure
-label_encoder = joblib.load('encoder\label_encoder.pkl')  # Label encoder for other categorical features
+model = joblib.load("model/churn_model.pkl")
+one_hot_columns = joblib.load('encoder/one_hot_columns.pkl')  # Columns from one-hot encoding
+tenure_encoder = joblib.load('encoder/tenure_encoder.pkl')  # Encoder for scaling tenure
+label_encoder = joblib.load('encoder/label_encoder.pkl')  # Label encoder for other categorical features
 
 # List of label encoded columns
 label_encoded_cols = ['Churn']
